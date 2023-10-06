@@ -8,41 +8,44 @@
 
 	<style type="text/css">
 		h1{font-family: 'VT323', monospace;}
+
+
+		.text{
+			text-align:center;
+			width:100%;
+			background-color:black;
+			font-size:50px;
+			color:white;
+		}
 	
 
-		
-
-		#orbs{
+		.circle{
 			width:400px;
 			height:400px;
-			background-color:whitesmoke;
-			background-image:url(https://i.pinimg.com/originals/e0/43/5f/e0435fd452bbed155b5b3c5128b4f7c5.gif);
 			background-size:cover;
 			background-repeat:no-repeat;
 			border-radius:100%;
 			display:inline-block;
+		background-color:whitesmoke;
+		background-position:center;
+
+
+		}
+
+		#orbs{
+			
+			background-image:url(https://i.pinimg.com/originals/e0/43/5f/e0435fd452bbed155b5b3c5128b4f7c5.gif);
+		
 		}
 		#yarn{
-		width:400px;
-			height:400px;
-			background-color:whitesmoke;
+		
 			background-image:url(https://solarsystem.nasa.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbEkxIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3d8b9f49c6e7e4844f29ef7e2ecbb20670d5b8af/675_Ball_of_Yarn_Animation.gif);
-			background-size:cover;
-			background-repeat:no-repeat;
-			border-radius:50%;	
-			background-position:center;
-			display:inline-block;
+			
 		}
 		#swirl{
-			width:400px;
-			height:400px;
-			background-color:whitesmoke;
+
 			background-image:url(https://64.media.tumblr.com/b3bbc14af37b5d8623ddab1b0602d3cb/5b5e406d3e0b03f9-fc/s500x750/c867236546e9d75aefb880224c9e1659eeb14883.gif);
-			background-size:cover;
-			background-repeat:no-repeat;
-			border-radius:50%;	
-			background-position:center;
-			display:inline-block;
+			
 		}
 
 body{
@@ -53,24 +56,40 @@ body{
 }
 
 p{
-	color:whie;
+	color:white;
 }
 
 	</style>
 </head>
 <body>
 
+	<center>
+
 <a href=projects.html>
-	<div id="orbs"></div>
+	<div class="circle" id="orbs">
+	<div class='text'>
+	Projects
+</div>
+	</div>
 </a>
 
 <a href=journal.html>
-	<div id="yarn"></div>
+	<div class="circle" id="yarn">
+		<div class='text'>
+	Journal
+</div>
+	</div>
 </a>
 
 <a href=aboutme.html>
-	<div id="swirl"></div>
+	<div class="circle" id="swirl">
+		<div class='text'>
+	About Me
+</div>
+	</div>
 </a>
+
+</center>
 
 </body>
 </html>
