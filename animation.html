@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		#dolphins{
+			width:100px;
+			height:100px;
+			background-color:lightblue;
+			background-image:url(https://i.pinimg.com/originals/68/47/2b/68472b8c9264d611a560ca798d2355fb.gif);*/
+			background-size:contain;
+			background-repeat: no-repeat;
+			animation-name:dance;
+			animation-duration:8s;
+			animation-iteration-count: infinite;
+			position:absolute;
+			background-position:center;
+
+		}
+
+@keyframes dance{
+
+	0%{
+		width:100px;
+			height:100px;
+			left:50px;
+	}
+
+	50%{
+		width:400px;
+			height:400px;
+			right:1025px;
+			background-color:seagreen;
+			transform:rotate(1080deg);
+	}
+
+	100%{
+		width:100px;
+			height:100px;
+			right:40px;
+			border-radius:60%;
+	}
+	
+}
+
+</style>
+</head>
+<body>
+
+<div id="dolphins"></div>
+</body>
+</html>
