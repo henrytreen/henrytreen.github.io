@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title></title>
+
+	<style type="text/css"> 
+
+
+		#candy{
+			width:200px;
+			height:200px;
+			background-image:url(https://m.media-amazon.com/images/I/71YrDK0E3uL._AC_UF894,1000_QL80_.jpg);
+			background-size:contain;
+			background-repeat:no-repeat;
+		}
+
+		body{
+			margin:0px;
+			background-size:cover;
+			background-repeat:no-repeat
+		}
+	
+
+	</style>
+
+</head>
+<body>
+
+<audio  src="scream.mp3" id="sound"></audio>
+
+	
+<center><h1>click to take a piece of candy
+
+		<div id="candy"></div>
+
+	</center>
+
+		<div id="ghost"><div>
+	<script type="text/javascript">
+
+		candy.addEventListener("click", function(){
+			candy.style.opacity = "0"
+			sound.play();
+			document.body.style.backgroundImage = "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZB2t9jnQxSzuzWtmFqI3kTRTfHJBZGeLHtg&usqp=CAU)";
+
+			})
+
+
+
+	</script>
+
+</body>
+</html>
+
+
