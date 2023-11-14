@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	
+</head>
+<body>
+
+	<script type="text/javascript">
+
+		function add10 (placeholder){
+				console.log(placeholder+10)
+		}
+
+		add10("cecilia")
+
+
+
+
+
+
+
+	
+		function makeOranges(){
+
+			var fruit =  document.createElement("div")
+
+			document.body.appendChild(fruit);
+			fruit.style.backgroundImage="url(https://i.pinimg.com/736x/21/cc/db/21ccdb5ace25d783e502b46103d36ef2.jpg)";
+			fruit.style.backgroundSize = "contain"
+			fruit.style.backgroundRepeat = "no-repeat"
+			fruit.style.width = "200px";
+			fruit.style.height = "200px";
+			fruit.style.borderRadius = "50%";
+			fruit.style.display = "inline-block";
+
+
+			fruit.addEventListener("mouseenter", function(){
+				fruit.style.opacity="0"
+
+			})
+
+			fruit.addEventListener("mouseout", function(){
+				fruit.style.opacity="1"
+
+			})
+} // end of function//
+
+
+		setInterval(makeOranges, 1000);
+
+</script>
+</body>
+</html>
