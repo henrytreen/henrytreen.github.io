@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	
+</head>
+<body>
+
+	<h1>click to jonny grow up</h1>
+
+	<script type="text/javascript">
+
+		function makeJonny(){
+
+			var jon =  document.createElement("div")
+
+			document.body.appendChild(jon);
+			jon.style.backgroundImage="url(littlejon.jpg)";
+			jon.style.backgroundSize = "contain"
+			jon.style.backgroundRepeat = "no-repeat"
+			jon.style.width = "200px";
+			jon.style.height = "200px";
+			jon.style.borderRadius = "50%";
+			jon.style.display = "inline-block";
+
+
+			jon.addEventListener("mouseenter", function(){
+				jon.style.opacity="1"
+
+			})
+
+			jon.addEventListener("mouseenter", function(){
+				jon.style.backgroundImage = "url(jonny.png)"
+
+			})
+
+			
+
+
+} // end of function//
+
+
+		setInterval(makeJonny, 100);
+
+</script>
+</body>
+
+</html>
