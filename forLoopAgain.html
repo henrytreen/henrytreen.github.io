@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+
+	<style type="text/css">
+		.tweeties{
+		width:100px;
+		height:100px;
+		background-size: contain;
+		background-image:url(https://cdn1.unitedinfocus.com/uploads/14/2023/11/GettyImages-1804665866-1140x760.jpg);
+		display:inline-block;
+		color-white;
+	}
+
+</style>
+
+
+</head>
+<body>
+
+
+	<script type="text/javascript">
+		function makeBird (input){
+		var bird = document.createElement("div");
+		bird.classList.add("tweeties")
+		document.body.appendChild(bird)
+		bird.innerText=input
+}
+
+for (var counter = 1; counter<101; counter=counter+1){
+makeBird(counter)
+}
+
+</script>
+
+</body>
+</html>

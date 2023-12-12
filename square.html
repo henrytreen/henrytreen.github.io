@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-	<style type="text/css">
-
-	#henry{
-		  height:400px;
-	      width:800px;
-		  background-color:deepskyblue;
-	
-	}
-
-	#henry:hover{		
-		background-color:chartreuse;
-		transition:5s;
-
-	}
-</style>
+    <style>
+        .nate {
+            height: 100px;
+            width: 100px;
+            background-image: url('nater.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: inline-block;
+            
+        }
+    </style>
 </head>
 <body>
-	<div id="henry"></div><div>
+    <h1>Here is Nate</h1>
 
+    <script type="text/javascript">
+        function MakeNathan() {
+            var nate = document.createElement("div");
+            nate.className = "nate";
+            document.body.appendChild(nate);
+
+
+        }
+
+        for (var counter = 1; counter < 100; counter++) { 
+            create();
+        }
+    </script>
 </body>
 </html>
