@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	
+</head>
+<body>
+<h1>hover to see nate + me grow up - then click on the image that appears</h1>
+
+	<audio src="Despacito.mp3" id="sound"></audio>
+
+	<script type="text/javascript">
+
+		document.addEventListener("click", function(){
+			sound.play();
+
+			})
+
+		function makeKids(){
+
+			var pic =  document.createElement("div")
+
+			document.body.appendChild(pic);
+			pic.style.backgroundImage="url(hennate.jpeg)";
+			pic.style.backgroundSize = "contain"
+			pic.style.backgroundRepeat = "no-repeat"
+			pic.style.width = "200px";
+			pic.style.height = "200px";
+			pic.style.borderRadius = "50%";
+			pic.style.display = "inline-block";
+			pic.style.transition ="4s"
+
+
+			// pic.addEventListener("mouseenter", function(){
+			// 	pic.style.opacity="1"
+
+			// })
+
+			pic.addEventListener("mouseenter", function(event){
+				console.log(Math.random())
+				pic.style.backgroundImage = "url(seb.jpeg)";
+				pic.style.position = "absolute"
+				pic.style.left = Math.random()*1400 +"px"
+				pic.style.top = Math.random()*500 +"px"
+
+
+			})
+
+		
+
+} 
+
+		setInterval(makeKids, 100);
+
+
+</script>
+
+</body>
+
+</html>
