@@ -5,14 +5,17 @@
 </head>
 <body>
 
+	<div id="foods">what is the best food?
+
 	<script type="text/javascript">
 
-		var random = Math.round(Math.random()*3)
-		console.log(random)
-
 		var brawlstars = ["henry", "nate", "seb", "jonnay", "jenny"]
+		document.addEventListener("click", function(){
+			var random = Math.round(Math.random()*4)
+		foods.innerText = brawlstars[random]
 
-		console.log(brawlstars[random])
+	})
+		
 
 	</script>
 
