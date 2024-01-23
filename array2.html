@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>CLICK TO CHANGE THE FOOD
+    <title></title>ClIiK tO cHaNgE tHe FoOd
     <style type="text/css">
         div {
             border: 1px solid black; 
@@ -16,21 +16,31 @@
 </head>
 <body>
 
+    <audio src="whotoldyou.mp3" id="sound"></audio>
+
+
     <div id="one"></div>
     <div id="two"></div>
 
     <script type="text/javascript">
-        var options = ["url(taco.jpg)", "url(steak.jpg)", "url(pasta.jpg)"]
+        var options = ["url(taco.jpg)", "url(steak.jpg)", "url(pasta.jpg)"];
+        var sound = document.getElementById("sound");
+
+        function playSound() {
+            sound.play();
+        }
 
         function make() {
             var random1 = Math.round(Math.random() * 2);
             var random2 = Math.round(Math.random() * 2);
 
-            one.style.backgroundImage = options[random1]
-            two.style.backgroundImage = options[random2]
+            one.style.backgroundImage = options[random1];
+            two.style.backgroundImage = options[random2];
+
+            playSound();
         }
 
-        document.addEventListener("click", make)
+        document.addEventListener("click", make);
     </script>
 </body>
 </html>
