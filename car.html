@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+		
+		#car{
+			background-color:blue;
+			width:200px;
+			height:200px;
+			position:absolute;
+			/*left:100px;
+			top:100px;*/
+
+		}
+
+
+	</style>
+
+
+</head>
+<body>
+
+<div id = "car"></div>
+
+<script type="text/javascript">
+
+	var x = 0
+
+	document.addEventListener("keydown", function(input){
+		console.log(input.key)
+		if (input.key=="ArrowRight"){
+		x = x+100
+		car.style.left=x+"px"
+
+
+
+	}
+
+	// function sayhi (input){console.log("hi")}
+
+	// sayhi()
+
+</script>
+
+
+</body>
+</html>
