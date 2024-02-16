@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input id="input">
+
+	</input>
+<button id="submission">
+			submit
+		</button>
+		<div id="answer"></div>
+
+		<script type="text/javascript">
+			submission.addEventListener("click", function(){
+				answer.innerText = input.value
+				if (input.value == "jonny"){answer.innerText = "im jonny"}
+				else if (input.value == "seb" || "Seb"){answer.innerText = "Hola me llamo Sebastian"}
+				else if (input.value == "nate" || "Nate"){answer.innerText = "Hallo, mein Name ist Nathan"}
+
+				else{answer.innerText = "type jonny nate or seb" + Math.round(Math.random()*100)+ " % correct"}
+
+			})
+
+		</script>
+
+</body>
+</html>
