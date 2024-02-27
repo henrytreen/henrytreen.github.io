@@ -56,55 +56,73 @@
     <script type="text/javascript">
 
 
-        // goal.addEventListener("mousemove", function(event) {
-        //     console.log(event)
-
-        // });
-
-
-        // goal.appendChild(pepp);
-
-        // goal.style.left =   event.clientX - 50 + "px";
-        // goal.style.top = event.clientY - 50 + "px";
-
-
     goal.addEventListener("click", function() {
 
         image = "net.jpg"
+
+        console.log(image)
     });
 
     kane.addEventListener("click", function() {
 
         image = "kane.avif"
+
+        console.log(image)
     });
 
 
     saka.addEventListener("click", function() {
 
         image = "saka.jpg"
+
+        console.log(image)
     });
 
     bellingham.addEventListener("click", function() {
 
         image = "bellingham.jpg"
+
+        console.log(image)
     });
 
     rashford.addEventListener("click", function() {
 
         image = "rashford.webp"
+
+        console.log(image)
     });
     grealish.addEventListener("click", function() {
 
         image = "grealish"
+
+        console.log(image)
     });
     maguire.addEventListener("click", function() {
 
         image = "maguire.webp"
+
+        console.log(image)
     });
     trent.addEventListener("click", function() {
 
         image = "trent.jpg"
 
+        console.log(image)
+
+    })
+
+        net.addEventListener("click", function makegoal
+    var goal = document.createElement("div");
+    goal.classList.add("goal")
+    goal.style.position="absolute";
+    goal.style.left = event.clientX +"px"
+    goal.style.top = event.clientY +"px"
+    goal.style.backgroundImage = image
+
+    document.body.appendChild(goal)
+
+    
+   
 
     </script>
 </body>
