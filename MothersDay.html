@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+        div {
+            border: 8px solid pink; 
+            width: 1100px;
+            height: 600px;
+            background-position: center;
+            background-size: contain;
+            display: inline-block;
+            font-size: 40px;
+
+
+        }
+    </style>
+</head>
+<body>
+
+    <h1>click</h1>
+        <p>
+
+    <div id="one"></div>
+    <div id="two"></div>
+
+    <script type="text/javascript">
+        var options = ["url(mom.jpg)", "url(mom2.jpg)", "url(mom3.jpg)", "url(mom4.jpg)"]
+
+        function make() {
+            var random1 = Math.round(Math.random() * 3);
+            var random2 = Math.round(Math.random() * 3);
+
+            one.style.backgroundImage = options[random1];
+            two.style.backgroundImage = options[random2];
+        }
+
+        document.addEventListener("click", make);
+    </script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+        div {
+         position:absolute;
+         font-family:courier;
+         font-size:1em;
+
+        }
+
+        #textbox{
+         left:0px;
+         width:1500px;
+         height:300px;
+         opacity:0.5;
+         position:absolute;
+         padding-top:0;
+         padding-left:0.46em;
+                  font-family:courier;
+                  font-size:1em;
+                  color:blue;
+
+
+        }
+
+        #clock{
+            background-size:contain;
+            background-repeat: no-repeat;
+            position:absolute;
+            top:500px;
+            width:200px;
+            height:200px;
+            color:blue;
+            padding-right:0;
+            padding-bottom:0;
+            background-image:url(https://easydrawingguides.com/wp-content/uploads/2023/04/how-to-draw-a-cartoon-clock-featured-image-1200.png);
+
+        }
+
+
+        #button{
+            position:absolute;
+            top:600px; 
+            left:300px;       
+        }
+
+    </style>
+</head>
+<body>
+
+
+
+    <div id="text"></div>
+
+    <textarea id="textbox"></textarea>
+<br>
+<div id = "clock"></div>
+
+<button id="button">assess my text.</button>
+
+
+    <script type="text/javascript">
+
+ var paragraph;
+ var wordNumber;
+            
+
+var seconds = 0;
+
+        function timer(){
+             seconds = seconds+1
+                console.log(seconds)
+                clock.innerText = seconds;
+
+            }
+
+        document.addEventListener("keydown", function go (){
+             setInterval(timer, 1000)
+             document.removeEventListener("keydown", go)
+
+            })
+
+           
+    
+
+
+        
+
+
+
+        // make inner text of div equal to the seconds function above
+
+
+
+       var nouns = ["dog", "cat", "person", "parrot", "apple", "book", "car", "dolphin", "elephant", "flower", "guitar", "house", "ice cream", "jacket", "kite", "lamp", "mountain", "notebook", "ocean", "pencil", "quilt", "river", "sun", "tree", "umbrella", "violin", "watermelon", "xylophone", "yacht", "zebra", "airport", "balloon", "camera", "diamond", "eagle", "forest", "globe", "harbor", "island", "jungle", "kangaroo", "lemon", "museum", "night", "octopus", "painting", "quokka", "rainbow", "snowflake", "turtle", "universe", "volcano", "windmill", "x-ray", "yogurt", "zoo", "acorn", "butterfly", "cloud", "desert", "emerald", "fountain", "grass", "hill", "iceberg", "jellyfish", "koala", "lighthouse", "moon", "nest", "oasis", "penguin", "quartz", "rose", "ship", "teapot", "unicorn", "vase", "whale", "xenon", "yellow", "zeppelin", "anchor", "bridge", "cactus", "drum", "earthquake", "flute", "galaxy", "hedgehog", "igloo", "jackal", "knight", "leaf", "mirror", "nebula", "orchid", "pyramid", "quest", "rocket", "star", "tornado", "violet", "wolf", "expedition", "yawn", "zigzag"]
+
+       //this is the list of verbs. It's called an array and each non is a string//
+
+       var verbs = ["ask", "jump", "run", "dance", "sing", "talk", "write", "read", "play", "listen", "build", "paint", "create", "destroy", "imagine", "discover", "explore", "invent", "observe", "study", "teach", "learn", "work", "rest", "move", "travel", "cook", "eat", "drink", "grow", "shrink", "open", "close", "begin", "end", "push", "pull", "lift", "throw", "catch", "choose", "decide", "remember", "forget", "love", "hate", "envy", "admire", "help", "guide", "save", "heal", "harm", "improve", "maintain", "clean", "dirty", "find", "lose", "win", "defeat", "protect", "attack", "defend", "surrender", "negotiate", "argue", "persuade", "convince", "explain", "describe", "predict", "solve", "change", "fix", "break", "install", "remove", "upgrade", "download", "upload", "share", "compare", "contrast", "measure", "weigh", "sell", "buy", "pay", "charge", "rent", "lease", "own", "belong", "serve", "lead", "follow", "support", "oppose", "accept", "reject", "praise", "criticize", "scream", "whisper", "speak", "hear", "see", "smell", "taste", "touch", "feel", "cry", "laugh", "smile", "frown", "nod", "shake", "wink", "blink"]
+
+       //this is the list of adjectives. It's called an array and each non is a string// 
+
+       var adjectives = ["happy", "sad", "tall", "short", "large", "small", "thin", "thick", "bright", "dark", "colorful", "plain", "loud", "quiet", "soft", "hard", "smooth", "rough", "hot", "cold", "warm", "cool", "young", "old", "new", "ancient", "modern", "fast", "slow", "early", "late", "rich", "poor", "clean", "dirty", "strong", "weak", "heavy", "light", "empty", "full", "busy", "free", "high", "low", "right", "wrong", "near", "far", "easy", "difficult", "soft", "hard", "fresh", "stale", "dry", "wet", "clear", "foggy", "bright", "dim", "shiny", "dull", "smooth", "bumpy", "sharp", "blunt", "noisy", "silent", "delicious", "tasteless", "sweet", "bitter", "salty", "spicy", "rich", "bland", "greedy", "generous", "beautiful", "ugly", "elegant", "clumsy", "careful", "careless", "friendly", "hostile", "brave", "cowardly", "calm", "anxious", "excited", "bored", "interested", "indifferent", "healthy", "sick", "alive", "dead", "wet", "dry", "good", "bad", "excellent", "terrible", "fantastic", "awful", "perfect", "flawed", "loyal", "traitorous", "faithful", "unfaithful", "grateful", "ungrateful", "patient", "impatient", "honest", "dishonest", "trustworthy", "suspicious", "reliable", "unreliable", "optimistic", "pessimistic"]
+
+       //these "sentences" and "x", "y", "z" variable is set to nothing at first so that later, we can use it store other stuff. The reason why we make it outside of a function is so we can refer to it anywhere. When a variable is made in a function you can't refer to it outside of that function//
+
+       var sentences= "there once was a " 
+
+       var x;
+       var y;
+       var z;
+
+
+// we're making a function called pullwords and 
+
+        function pullWords (){
+           x = Math.floor(Math.random()*nouns.length)
+           y = Math.floor(Math.random()*verbs.length)
+           z = Math.floor(Math.random()*adjectives.length)
+
+          sentences = sentences + " " + nouns[x]+ " " + verbs[y]+ " "+adjectives[z] 
+          // console.log(sentences) 
+
+
+          text.innerText = sentences
+
+
+        }
+
+
+        for (var counter = 1; counter<101; counter=counter+1)
+
+
+         {pullWords()}
+
+
+    
+    button.addEventListener("click", function
+            (){
+            paragraph = textbox.value;
+            console.log(paragraph)
+            paragraph = paragraph.split(" ")
+            console.log(paragraph)
+
+            sentences = sentences.split(" ");
+            console.log(sentences)
+
+
+                for (var i=1; i==sentences.length; i=i+1){
+                    if (sentences[i] == paragraph[i]){
+                console.log(paragraph[i])
+                else if (sentences[i] !== paragraph[i]){
+                    console.log(paragraph[i]+"IS WRONG")
+                }
+            }
+
+
+                }
+            
+
+
+
+            })
+    </script>
+
+</body>
+</html>
