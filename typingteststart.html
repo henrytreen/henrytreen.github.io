@@ -58,7 +58,7 @@
 <br>
 <div id = "clock"></div>
 
-<button id="button">assess my text.</button>
+<button id="button">evaluate my text</button>
 
 
     <script type="text/javascript">
@@ -106,7 +106,7 @@ var seconds = 0;
 
        //these "sentences" and "x", "y", "z" variable is set to nothing at first so that later, we can use it store other stuff. The reason why we make it outside of a function is so we can refer to it anywhere. When a variable is made in a function you can't refer to it outside of that function//
 
-       var sentences= "there once was a " 
+       var sentences= "there once was a" 
 
        var x;
        var y;
@@ -136,7 +136,24 @@ var seconds = 0;
          {pullWords()}
 
 
-    
+ var newSentences = sentences.split(" ")
+ console.log("new sentences are " + newSentences)
+
+ function check (input){
+                    if (newSentences[input] == paragraph[input]){
+                alert("correct")
+
+                    }
+
+             if (newSentences[input] !== paragraph[input]){
+                    alert(paragraph[input]+" is wrong")
+                 
+            }
+         }
+
+        
+   
+
     button.addEventListener("click", function
             (){
             paragraph = textbox.value;
@@ -144,20 +161,11 @@ var seconds = 0;
             paragraph = paragraph.split(" ")
             console.log(paragraph)
 
-            sentences = sentences.split(" ");
+            newSentences = sentences.split(" ");
+
             console.log(sentences)
 
-
-                for (var i=1; i==sentences.length; i=i+1){
-                    if (sentences[i] == paragraph[i]){
-                console.log(paragraph[i])
-                else if (sentences[i] !== paragraph[i]){
-                    console.log(paragraph[i]+"IS WRONG")
-                }
-            }
-
-
-                }
+                for (var i=0; i<paragraph.length-1; i=i+1){ check(i)}
             
 
 
